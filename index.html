@@ -1,168 +1,225 @@
+<!DOCTYPE html>
 <html>
-    
-    <link rel="stylesheet" href="book.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<body>
-<nav class="nav">
-        <div class="container">
-            <div class="logo">
-              
-                   
-                <a href="#"> <img src="book3.png" width="30" height="30" ">
-                Find My Book</a>
-        </div>
-            <div id="mainListDiv" class="main_list">
-                <ul class="navlinks">
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">My Acoount</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Log Out</a></li>
-                    <form class="example" action="/action_page.php" style="margin:auto;max-width:300px">
-                        <input type="text" placeholder="Search.." name="search2">
-                        <button type="submit"><i class="fa fa-search"></i></button>
-                      </form>
-                </ul>
-            </div>
-            <span class="navTrigger">
-                <i></i>
-                <i></i>
-                <i></i>
-            </span>
-        </div>
-    </nav>
-
-    <section class="home">
-        <form class="example" action="/action_page.php" style="margin:auto;max-width:300px">
-            <input type="text" placeholder="Search.." name="search2">
-            <button type="submit"><i class="fa fa-search"></i></button>
-          </form>
-    </section>
-  <div class="mg">
-    <div class="responsive">
-        <div class="gallery">
-          <a target="_blank" href="img_5terre.jpg">
-            <img src="1.jpg" alt="Cinque Terre" width="10%" height="400">
-          </a>
-          <div class="desc">Add a description of the image here</div>
-        </div>
-      </div>
-      
-      
-      <div class="responsive">
-        <div class="gallery">
-          <a target="_blank" href="img_forest.jpg">
-            <img src="2.jpg" alt="Forest" width="600" height="400">
-          </a>
-          <div class="desc">Add a description of the image here</div>
-        </div>
-      </div>
-      
-      <div class="responsive">
-        <div class="gallery">
-          <a target="_blank" href="img_lights.jpg">
-            <img src="1.jpg" alt="Northern Lights" width="600" height="400">
-          </a>
-          <div class="desc">Add a description of the image here</div>
-        </div>
-      </div>
-      
-      <div class="responsive">
-        <div class="gallery">
-          <a target="_blank" href="img_mountains.jpg">
-            <img src="2.jpg" alt="Mountains" width="600" height="400">
-          </a>
-          <div class="desc">Add a description of the image here</div>
-        </div>
-      </div>
-     
-      <div class="clearfix"></div>
-    </div> 
-    
-<footer class="footer-distributed">
-
-			<div class="footer-left">
-
-                <h3>	<img src="book3.png" width="30" height="30">  Find<span>My</span>Book</h3>
-
-				<p class="footer-links">
-					<a href="#" class="link-1">Home</a>
-					
-					<a href="#">Blog</a>
-				
-					<a href="#">Pricing</a>
-				
-					<a href="#">About</a>
-					
-					<a href="#">Faq</a>
-					
-					<a href="#">Contact</a>
-				</p>
-
-				<p class="footer-company-name">Find My Book © 2020</p>
-			</div>
-
-			<div class="footer-center">
-
-				<div>
-					<i class="fa fa-map-marker"></i>
-					<p><span>444 S. Jassusar</span> Bikaner, India</p>
-				</div>
-
-				<div>
-					<i class="fa fa-phone"></i>
-					<p>+1.555.555.5555</p>
-				</div>
-
-				<div>
-					<i class="fa fa-envelope"></i>
-					<p><a href="mailto:boolenpandit@company.com">boolenpandit@company.com</a></p>
-				</div>
-
-			</div>
-
-			<div class="footer-right">
-
-				<p class="footer-company-about">
-					<span>About the company</span>
-					This is made for shaering books.You can find book nerby you and also share your book.
-				</p>
-
-				<div class="footer-icons">
-
-					<a href="#"><i class="fa fa-facebook"></i></a>
-					<a href="#"><i class="fa fa-twitter"></i></a>
-					<a href="#"><i class="fa fa-linkedin"></i></a>
-					<a href="#"><i class="fa fa-github"></i></a>
-
-				</div>
-
-			</div>
-
-		</footer>
-<!-- Jquery needed -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="js/scripts.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<style>
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
 
-<!-- Function used to shrink nav bar removing paddings and adding black background -->
-    <script>
-        $(window).scroll(function() {
-            if ($(document).scrollTop() > 50) {
-                $('.nav').addClass('affix');
-                console.log("OK");
-            } else {
-                $('.nav').removeClass('affix');
-            }
-        });
-    </script>
-    <script>
-    $('.navTrigger').click(function () {
-        $(this).toggleClass('active');
-        console.log("Clicked menu");
-        $("#mainListDiv").toggleClass("show_list");
-        $("#mainListDiv").fadeIn();
-    
-    });
+.login-page {
+  width: 360px;
+  padding: 8% 0 0;
+  margin: auto;
+}
+.form {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.form input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.form button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #4CAF50;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+.form button:hover,.form button:active,.form button:focus {
+  background: #43A047;
+}
+.form .message {
+  margin: 15px 0 0;
+  color: #b3b3b3;
+  font-size: 12px;
+}
+.form .message a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+.form .register-form {
+  display: none;
+}
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 300px;
+  margin: 0 auto;
+}
+.container:before, .container:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.container .info {
+  margin: 50px auto;
+  text-align: center;
+}
+.container .info h1 {
+  margin: 0 0 15px;
+  padding: 0;
+  font-size: 36px;
+  font-weight: 300;
+  color: #1a1a1a;
+}
+.container .info span {
+  color: #4d4d4d;
+  font-size: 12px;
+}
+.container .info span a {
+  color: #000000;
+  text-decoration: none;
+}
+.container .info span .fa {
+  color: #EF3B3A;
+}
+.mg{
+    color: white;
+    text-align: center;
+    justify-content: center;
+    padding-top: 20px;
+}
+body {
+    background-image: url(https://images.unsplash.com/photo-1498550744921-75f79806b8a7?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b0f6908fa5e81286213c7211276e6b3d&auto=format&fit=crop&w=1500&q=80);
+    background-position: center top;
+    background-size:cover;
+
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;      
+}
+</style>
+<body>
+    <div class="mg">
+    <h3>	<img src="D:/book3.png" width="30" height="30">  Find <span>My </span>Book             
+   </h3>
+  
+</div>
+    <div class="login-page">
+        <div class="form">
+          <form class="register-form">
+            <input type="text" placeholder="name" id=" ur" required/>
+            <input type="password" placeholder="password" id="pr" required/>
+            <input type="text" placeholder="email address" id="email" required/>
+      <div class="mj"> <input type="text" placeholder="ISBN Number" id="num"/></div>
+            <div class="input-group-btn"> 
+                <button class="btn btn-success add-more" type="button" style="margin-bottom: 10px;"><i class="glyphicon glyphicon-plus"></i> Add More Books </button>
+              </div>
+            <button onclick="sign()">create</button>
+            <p class="message">Already registered? <a href="#">Sign In</a></p>
+          </form>
+          <form class="login-form">
+          <input type="text" placeholder="username" id="user" required/>
+           <input type="password" placeholder="password" id="pass" required/>
+            <button onclick="log()">login</button>
+            <p class="message">Not registered? <a href="#">Create an account</a></p>
+          </form>
+        </div>
+      </div>
+     <p id="demo"></p>
+</body>
+<script>$('.message a').click(function(){
+    $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
+ });</script>
+
+<script type="text/javascript">
+
+
+    $(document).ready(function() {
+
+
+      $(".add-more").click(function(){ 
+        $('.mj').append('<div="hii"><input type="text" name="product_name[]" placeholder="ISBN Number"/></div>'); 
+      });
+});
+
+
 </script>
-    </body>
+<script>
+    function sign() {
+  var x = document.getElementById("num").value;
+ var r=check(x);
+
+}
+</script>
+<script>
+    var isValidIsbn = function(str) {
+
+var sum,
+    weight,
+    digit,
+    check,
+    i;
+
+str = str.replace(/[^0-9X]/gi, '');
+
+if (str.length != 10 && str.length != 13) {
+    return false;
+}
+
+if (str.length == 13) {
+    sum = 0;
+    for (i = 0; i < 12; i++) {
+        digit = parseInt(str[i]);
+        if (i % 2 == 1) {
+            sum += 3*digit;
+        } else {
+            sum += digit;
+        }
+    }
+    check = (10 - (sum % 10)) % 10;
+    return (check == str[str.length-1]);
+}
+
+if (str.length == 10) {
+    weight = 10;
+    sum = 0;
+    for (i = 0; i < 9; i++) {
+        digit = parseInt(str[i]);
+        sum += weight*digit;
+        weight--;
+    }
+    check = 11 - (sum % 11);
+    if (check == 10) {
+        check = 'X';
+    }
+    return (check == str[str.length-1].toUpperCase());
+}
+}
+</script>
+<script>
+    function log() {
+  var x = document.getElementById("user").value;
+  var y = document.getElementById("pass").value;
+  window.location.href="find_my_book.html";
+}
+</script>
+</html>
+
+
+
+
+
+
+
