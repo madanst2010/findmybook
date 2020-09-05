@@ -427,18 +427,7 @@ form.example input[type=text] {
     width: 24.99999%;
   }
   
-  @media only screen and (max-width: 100px) {
-    .responsive {
-      width: 49.99999%;
-      margin: 6px 0;
-    }
-  }
-  
-  @media only screen and (max-width: 500px) {
-    .responsive {
-      width: 100%;
-    }
-  }
+ 
   
   .clearfix:after {
     content: "";
